@@ -39,13 +39,16 @@ System.config({
     "clean-css": "npm:clean-css@3.4.8",
     "core-js": "npm:core-js@1.1.3",
     "css": "github:systemjs/plugin-css@0.1.20",
+    "es6-promise": "npm:es6-promise@3.0.2",
     "es6-shim": "github:es-shims/es6-shim@0.33.13",
     "json": "github:systemjs/plugin-json@0.1.0",
     "reflect-metadata": "npm:reflect-metadata@0.1.2",
     "rx": "npm:rx@3.1.2",
+    "rxjs": "npm:rxjs@5.0.0-beta.0",
     "scss": "github:theefer/plugin-sass@master",
     "text": "github:systemjs/plugin-text@0.0.2",
     "typescript": "npm:typescript@1.6.0-dev.20150825",
+    "zone.js": "npm:zone.js@0.5.10",
     "github:angular-translate/bower-angular-translate@2.8.0": {
       "angular": "npm:angular@1.4.8"
     },
