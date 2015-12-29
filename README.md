@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/madhukard/angular2-jspm-seed.svg?branch=master)](https://travis-ci.org/madhukard/angular2-jspm-seed)
+[![devDependency Status](https://david-dm.org/madhukard/angular2-jspm-seed/dev-status.svg)](https://david-dm.org/madhukard/angular2-jspm-seed#info=devDependencies)
+
 Starter project for Angular 2 + TypeScript + JSPM + Gulp
 
 # Angular2 / TypeScript / JSPM / Gulp Starter Project

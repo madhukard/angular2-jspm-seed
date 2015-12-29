@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- 5.2.0
+before_script:
+- npm install -g gulp
+- npm install -g jspm
+- npm install
+- jspm install
+script:
+- gulp deploy
+env:
+  global:
+    secure: IJPOubCseuVMalPUnZQFDabbGGgech84T0UpDxUdgs8FxTfBLvXySvtZNsB1IU0IQv4Mo5aciv9LBblRXsU8bzysincpcWI/apKQSVTcbdNgWANyNukZuwoRmDgI6J5pz4SpAz5FXVDHSY15O64uUgqHPClbAQb1fG3TG5nyWCH2lBGlCrVOh/Y8djvwaYBQYIc0kKlZd+ERSsqah5/GcSB7vK00ifpqqHZwqpuzKLgmWuHwGGsWHfrK/LQmylrICh+Tim+PnrMl/vJ3NzCvU42nFtEjUwoS8eMK4njRSH5ym4ABnouRf3USP90Ay34fDjfTvsgSaNURDfWl3siAbbHg+2DwMb23nqP+R5PB4OGA6e0bEtJpYrKk84vv1pl9viBXiVOilpbCtAvehWQ3nC6y2AsclqzmBvz6zxgG6y8UN7LXEbI2OEgdgUTrcbrCNYAMYvwkMUFLbHOmrfy7M98iE6m4AwYMs56VQo82oHBrl2wVtyDWlOZLdZ8LBHIFdXPWP0e7UZg9v6iJ9Gd/XZXrpIS2HZNIqRKbCsGh4lv2TwUSvZsuVtoGed4KIFHeBm3TJoF9KPNcCuBvO6J8SJNNKpPLwrkX91mDIK5GeEL0S5y9dHVl+M6Yk4FYU/V+kZ4n7UqItBptjfDoINSbsC7i3ktbgEGZ14k93rYI9pw=
