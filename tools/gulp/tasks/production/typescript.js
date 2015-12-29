@@ -5,13 +5,7 @@ var conf = require('../../config').typescript.production;
 var typescript = require('gulp-typescript');
 var sourcemaps = require('gulp-sourcemaps');
 var tslint = require('gulp-tslint');
-
-var tsProject = typescript.createProject({
-  target: 'es5',
-  module: 'commonjs',
-  sortOutput: true,
-  typescript: require('typescript')
-});
+var tsProject = typescript.createProject('tsconfig.json');
 
 gulp.task('typescript-deploy', function () {
   return gulp.src(conf.scripts)

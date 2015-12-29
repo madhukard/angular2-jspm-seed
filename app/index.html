@@ -3,18 +3,21 @@
     <title>Angular 2 + JSPM QuickStart</title>
     <base href="/">
 
+    <!--removeIf(production)-->
     <script src="jspm/system.js"></script>
     <script src="jspm-config/config.js"></script>
-
-    <!-- 2. Configure SystemJS -->
     <script>
       System.import('src/boot')
         .then(null, console.error.bind(console));
     </script>
+    <!--endRemoveIf(production)-->
+
+    <!--removeIf(development)-->
+    <script src="app.min.js"></script>
+    <!--endRemoveIf(development)-->
 
   </head>
 
-  <!-- 3. Display the application -->
   <body>
     <my-app>Loading...</my-app>
   </body>

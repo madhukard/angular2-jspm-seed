@@ -5,10 +5,10 @@ var deploySrc = path + '/src';
 /**
  * Delete folders and files
  */
-gulp.task('delete-deploy', function (callback) {
-  del(path, callback);
+gulp.task('delete-deploy', function () {
+  return del(path);
 });
 
-gulp.task('delete-deploy-src', function (callback) {
-  del(deploySrc, callback);
+gulp.task('delete-deploy-src', function () {
+  return del(deploySrc);
 });

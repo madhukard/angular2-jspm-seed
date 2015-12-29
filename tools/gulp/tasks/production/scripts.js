@@ -10,9 +10,7 @@ var uglify     = require('gulp-uglify');
 var rename = require('gulp-rename');
 
 gulp.task('scripts-bundle', function () {
-  var builder = new jspm.Builder({
-    baseURL: "./"
-  });
+  var builder = new jspm.Builder();
 
   return new Promise(function(resolve, reject) {
     builder.buildStatic(config.source, { sourceMaps: true })

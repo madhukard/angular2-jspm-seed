@@ -4,6 +4,6 @@ var config = require('../../config');
 /**
  * Delete folders and files
  */
-gulp.task('delete', function (callback) {
-  del(config.delete.development, callback);
+gulp.task('delete', function () {
+  return del(config.delete.development);
 });
