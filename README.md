@@ -3,9 +3,9 @@
 
 Starter project for Angular 2 + TypeScript + JSPM + Gulp
 
-# Angular2 / TypeScript / JSPM / Gulp Starter Project
+# Angular2 / TypeScript / Bootstrap/ JSPM / Gulp Starter Project
  
-A quick start template for web development with JSPM, Gulp, TypeScript and Angular 2. 
+A quick start template for web development with JSPM, Gulp, Bootstap, TypeScript and Angular 2. 
 
 
 ## Development Requirements
