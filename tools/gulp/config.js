@@ -43,7 +43,8 @@ module.exports = {
   watch: {
     html: src + '/**/*.html',
     scripts: src + '/**/*.ts',
-    sass: app + '/**/*.scss'
+    sass: app + '/**/*.scss',
+    assets: app + '/assets/**/*.*'
   },
   app: app,
   production: production,

@@ -3,6 +3,8 @@ import 'es6-shim';
 import {bootstrap} from 'angular2/platform/browser';
 import {HTTP_PROVIDERS} from 'angular2/http';
 import {ROUTER_PROVIDERS} from 'angular2/router';
+import 'bootstrap/css/bootstrap.css!';
+import 'assets/app.css!';
 
 import {AppComponent} from './app.component';
 

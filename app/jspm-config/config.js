@@ -26,12 +26,14 @@ System.config({
     "angular2": "npm:angular2@2.0.0-beta.0",
     "babel": "npm:babel@5.8.34",
     "babel-runtime": "npm:babel-runtime@5.8.34",
+    "bootstrap": "github:twbs/bootstrap@3.3.6",
     "clean-css": "npm:clean-css@3.4.8",
     "core-js": "npm:core-js@1.2.6",
     "css": "github:systemjs/plugin-css@0.1.20",
     "es6-promise": "npm:es6-promise@3.0.2",
     "es6-shim": "github:es-shims/es6-shim@0.33.13",
     "json": "github:systemjs/plugin-json@0.1.0",
+    "ng2-bootstrap": "npm:ng2-bootstrap@1.0.0-beta.0",
     "reflect-metadata": "npm:reflect-metadata@0.1.2",
     "rxjs": "npm:rxjs@5.0.0-beta.0",
     "scss": "github:theefer/plugin-sass@master",
@@ -116,6 +118,9 @@ System.config({
     "github:theefer/plugin-sass@master": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "sass.js": "npm:sass.js@0.9.4"
+    },
+    "github:twbs/bootstrap@3.3.6": {
+      "jquery": "github:components/jquery@2.1.4"
     },
     "npm:abbrev@1.0.7": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
@@ -801,6 +806,10 @@ System.config({
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:ng2-bootstrap@1.0.0-beta.0": {
+      "crypto": "github:jspm/nodelibs-crypto@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:node-pre-gyp@0.6.18": {

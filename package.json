@@ -49,7 +49,7 @@
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.5",
     "tslint": "^3.2.1",
-    "typescript": "^1.7.3",
+    "typescript": "^1.7.5",
     "url": "^0.11.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
@@ -62,11 +62,13 @@
     "dependencies": {
       "angular2": "npm:angular2@2.0.0-beta.0",
       "babel": "npm:babel@^5.8.23",
+      "bootstrap": "github:twbs/bootstrap@^3.3.6",
       "clean-css": "npm:clean-css@^3.4.8",
       "css": "github:systemjs/plugin-css@^0.1.6",
       "es6-promise": "npm:es6-promise@^3.0.2",
       "es6-shim": "github:es-shims/es6-shim@^0.33.3",
       "json": "github:systemjs/plugin-json@^0.1.0",
+      "ng2-bootstrap": "npm:ng2-bootstrap@1.0.0-beta.0",
       "reflect-metadata": "npm:reflect-metadata@^0.1.2",
       "rxjs": "npm:rxjs@5.0.0-beta.0",
       "scss": "github:theefer/plugin-sass@master",
