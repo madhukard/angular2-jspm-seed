@@ -79,16 +79,16 @@ module.exports = {
       dest: development + '/assets'
     },
     production: {
-      main: app + '/style/app.scss',
-      source: app + '/**/*.scss',
-      dest: productionAssets + '/css'
+      main: app + '/scss/app.scss',
+      source: src + '/**/*.scss',
+      dest: production + '/assets'
     }
   },
 
   images: {
     production: {
-      source: app + '/**/*.svg',
-      dest: production
+      source: app + '/assets/**/*.*',
+      dest: production + '/assets'
     }
   },
 

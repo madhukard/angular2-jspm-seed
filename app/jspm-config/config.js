@@ -8,7 +8,6 @@ System.config({
     ]
   },
   paths: {
-    "assets/app.css": "target/development/assets/app.css",
     "github:*": "target/development/jspm/github/*",
     "npm:*": "target/development/jspm/npm/*"
   },
