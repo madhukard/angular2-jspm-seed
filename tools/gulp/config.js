@@ -33,11 +33,12 @@ module.exports = {
       css: app + '/**/*.css',
       html: app + '/**/*.html',
       js: app + '/**/*.js',
-      dest: development,
-      vendorFiles: ['node_modules/angular2/bundles/angular2-polyfills.min.js']
+      vendorFiles: ['node_modules/angular2/bundles/angular2-polyfills.min.js'],
+      dest: development
     },
     production: {
-
+      vendorFiles: ['node_modules/angular2/bundles/angular2-polyfills.min.js'],
+      dest: production
     }
   },
   watch: {
