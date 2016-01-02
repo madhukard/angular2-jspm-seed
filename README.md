@@ -7,6 +7,7 @@ Starter project for Angular 2 + TypeScript + JSPM + Gulp
  
 A quick start template for web development with JSPM, Gulp, Bootstap, TypeScript and Angular 2. 
 
+Demo - http://madhukard.github.io/angular2-jspm-seed/
 
 ## Development Requirements
 
