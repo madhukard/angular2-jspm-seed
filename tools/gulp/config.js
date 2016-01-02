@@ -28,10 +28,7 @@ module.exports = {
   },
   copy: {
     development: {
-      svg: app + '/**/*.svg',
-      png: app + '/**/*.png',
-      css: app + '/**/*.css',
-      html: app + '/**/*.html',
+      assets: app + '/assets/**/*.*',
       js: app + '/**/*.js',
       vendorFiles: ['node_modules/angular2/bundles/angular2-polyfills.min.js'],
       dest: development

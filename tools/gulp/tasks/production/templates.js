@@ -8,6 +8,5 @@ gulp.task('deploy-templates', function () {
     .pipe(templateCache({root: '/src/', moduleSystem: 'Browserify', standalone: true}))
     //need to add an angular require to keep karma happy!
     .pipe(insert.prepend('var angular = require(\'angular\');'))
-    .pipe(gulp.dest(path.typescript.production.dest))
-    .pipe(gulp.dest(path.typescript.development.dest));
+    .pipe(gulp.dest(path.typescript.production.dest));
 });

@@ -7,8 +7,8 @@ var conf = require('../../config').copy.development;
  */
 gulp.task('copy-dev', function () {
   gulp
-    .src([conf.png, conf.svg, conf.css])
-    .pipe(gulp.dest(conf.dest));
+    .src([conf.assets])
+    .pipe(gulp.dest(conf.dest + '/assets'));
 
   gulp
     .src(conf.vendorFiles)

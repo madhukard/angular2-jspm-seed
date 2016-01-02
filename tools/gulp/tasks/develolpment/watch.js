@@ -8,5 +8,5 @@ gulp.task('watch', ['build', 'browsersync'], function () {
   gulp.watch(config.sass, ['sass']);
   gulp.watch(config.scripts, ['typescript-dev']);
   gulp.watch(config.html, ['html-dev']);
-  gulp.watch(config.assets, ['copy']);
+  gulp.watch(config.assets, ['copy-dev']);
 });

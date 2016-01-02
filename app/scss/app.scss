@@ -111,7 +111,7 @@ ul.alert-dropdown {
 @media(min-width:768px) {
   .side-nav {
     position: fixed;
-    top: 61px;
+    top: 62px;
     //left: 225px;
     width: 225px;
     //margin-left: -225px;
@@ -145,6 +145,13 @@ ul.alert-dropdown {
     }
   }
 }
+
+@media (max-width: 1199px) {
+  .side-nav {
+    top: 52px;
+  }
+}
+
 
 .side-nav>li>ul {
   padding: 0;

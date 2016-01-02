@@ -14,6 +14,7 @@ gulp.task('scripts-bundle', function () {
 
   builder.config({
     paths: {
+      "assets/material-icons.css": "target/production/assets/material-icons.css",
       "assets/app.css": "target/production/assets/app.css"
     },
     rootURL: "target/production/"
