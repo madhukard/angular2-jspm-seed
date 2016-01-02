@@ -1,8 +1,9 @@
 import {Component} from 'angular2/core';
-import {Router, Route, RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
+import {Router, Route, RouteConfig, ROUTER_DIRECTIVES, Location} from 'angular2/router';
 
 import {Home} from './home/home';
 import {About} from './about/about';
+
 
 @Component({
   selector: 'my-app',
@@ -16,7 +17,14 @@ import {About} from './about/about';
   new Route({ path: '/about', component: About, name: 'About'})
 ])
 export class AppComponent {
+  location: Location;
+  currentPathStr = '';
 
-  constructor() {}
-
+  constructor(location: Location, router: Router) {
+    this.location = location;
+    $.material.init();
+    $.material.ripples();
+    this.currentPathStr = '/home';
+    router.subscribe((value) => this.currentPathStr = value);
+  }
 }

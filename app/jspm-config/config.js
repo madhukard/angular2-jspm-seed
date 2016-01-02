@@ -26,6 +26,7 @@ System.config({
     "babel": "npm:babel@5.8.34",
     "babel-runtime": "npm:babel-runtime@5.8.34",
     "bootstrap": "github:twbs/bootstrap@3.3.6",
+    "bootstrap-material-design": "github:FezVrasta/bootstrap-material-design@0.5.7",
     "clean-css": "npm:clean-css@3.4.8",
     "core-js": "npm:core-js@1.2.6",
     "css": "github:systemjs/plugin-css@0.1.20",

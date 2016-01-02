@@ -10,6 +10,10 @@ gulp.task('copy', function () {
     .src([conf.png, conf.svg, conf.css])
     .pipe(gulp.dest(conf.dest));
 
+  gulp
+    .src(conf.vendorFiles)
+    .pipe(gulp.dest(conf.dest + '/vendor'));
+
   return gulp
     .src([conf.js])
     .pipe(replace('"github:*": "target/development/jspm/github/*"', '"github:*": "jspm/github/*"'))

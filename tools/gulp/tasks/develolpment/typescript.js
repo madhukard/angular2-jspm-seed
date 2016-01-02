@@ -22,7 +22,7 @@ gulp.task('typescript-dev', function () {
     .pipe(tslint())
     .pipe(tslint.report('prose', {emitError: false}))
     .pipe(typescript(tsProject))
-    //.pipe(sourcemaps.write('./maps', {includeContent: false, sourceRoot: '/src'}))
+    //.pipe(sourcemaps.write('./maps', {includeContent: false, sourceRoot: '/app/src'}))
     .pipe(gulp.dest(conf.dest))
     .pipe(browserSync.stream());
 });

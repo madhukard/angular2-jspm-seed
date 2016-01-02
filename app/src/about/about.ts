@@ -3,13 +3,11 @@ import {Http} from 'angular2/http';
 
 @Component({
   selector: 'about',
-  templateUrl: 'src/about/about.html',
-  providers: [],
-  directives: [],
-  pipes: []
+  templateUrl: 'src/about/about.html'
 })
 export class About {
-  constructor(http:Http) {
-
+  clickMessage = '';
+  onClickMe() {
+    this.clickMessage ='You are my hero!';
   }
 }

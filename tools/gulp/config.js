@@ -6,7 +6,6 @@ var development = 'target/development';
 var coverage = 'target/coverage';
 var production = 'target/production';
 var developmentAssets = 'target/development/assets';
-var productionAssets = 'target/production/assets';
 
 
 module.exports = {
@@ -34,14 +33,15 @@ module.exports = {
       css: app + '/**/*.css',
       html: app + '/**/*.html',
       js: app + '/**/*.js',
-      dest: development
+      dest: development,
+      vendorFiles: ['node_modules/angular2/bundles/angular2-polyfills.min.js']
     },
     production: {
 
     }
   },
   watch: {
-    html: src + '/**/*.html',
+    html: app + '/**/*.html',
     scripts: src + '/**/*.ts',
     sass: app + '/**/*.scss',
     assets: app + '/assets/**/*.*'

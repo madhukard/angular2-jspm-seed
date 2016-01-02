@@ -18,6 +18,7 @@
     "test": "gulp test"
   },
   "devDependencies": {
+    "angular2": "^2.0.0-beta.0",
     "browser-sync": "^2.10.1",
     "browser-sync-spa": "^1.0.2",
     "del": "^2.2.0",
@@ -63,6 +64,7 @@
       "angular2": "npm:angular2@2.0.0-beta.0",
       "babel": "npm:babel@^5.8.23",
       "bootstrap": "github:twbs/bootstrap@^3.3.6",
+      "bootstrap-material-design": "github:FezVrasta/bootstrap-material-design@^0.5.7",
       "clean-css": "npm:clean-css@^3.4.8",
       "css": "github:systemjs/plugin-css@^0.1.6",
       "es6-promise": "npm:es6-promise@^3.0.2",
