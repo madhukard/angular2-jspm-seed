@@ -33,6 +33,10 @@ gulp
 
 `gulp`
 
+### Running test
+
+`gulp test`
+
 ### Production build
 
 `gulp deploy`
