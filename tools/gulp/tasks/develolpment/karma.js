@@ -2,7 +2,7 @@
 
 var path = require('path');
 var gulp = require('gulp');
-var karma = require('karma');
+var Server = require('karma').Server;
 var config = require('../../config').watch;
 var del = require('del');
 var deletePath = require('../../config').delete.coverage;
@@ -23,25 +23,23 @@ gulp.task('coverage', function (callback) {
     callback);
 });
 
-
 function runTests(done) {
-  karma.server.start({
-    configFile: path.join(__dirname, '/../../../karma.conf.js')
-  }, function () {
-    done();
-  });
+  new Server({
+    configFile: path.join(__dirname, '/../../../../karma.conf.js')
+  }, done).start();
 }
 
 function runCoverageTests(done) {
-  karma.server.start({
-    configFile: path.join(__dirname, '/../../../karma-coverage.conf.js')
-  }, function () {
-    done();
-  });
+  new Server({
+    configFile: path.join(__dirname, '/../../../../karma-coverage.conf.js'),
+    singleRun: true
+  }, done).start();
 }
+
 gulp.task('run-tests-coverage', ['typescript-karma-coverage'], function (done) {
   runCoverageTests(done);
 });
+
 gulp.task('run-tests', [], function (done) {
   //gulp.watch(jspm-config.scripts, ['typescript-karma']);
   runTests(done);

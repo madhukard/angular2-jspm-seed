@@ -18,5 +18,6 @@ import {ROUTER_PROVIDERS} from 'angular2/router';
 
 import {AppComponent} from './app.component';
 
+//noinspection TypeScriptValidateTypes
 bootstrap(AppComponent, [HTTP_PROVIDERS, ROUTER_PROVIDERS])
   .catch(err => console.error(err));

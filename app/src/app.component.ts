@@ -22,8 +22,13 @@ export class AppComponent {
 
   constructor(location: Location, router: Router) {
     this.location = location;
+
+    //noinspection TypeScriptUnresolvedVariable
     $.material.init();
+
+    //noinspection TypeScriptUnresolvedVariable
     $.material.ripples();
+
     this.currentPathStr = '/home';
     router.subscribe((value) => this.currentPathStr = value);
   }
