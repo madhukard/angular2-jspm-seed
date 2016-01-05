@@ -21,7 +21,7 @@ gulp.task('scripts-bundle', function () {
   });
 
   return new Promise(function(resolve, reject) {
-    builder.buildStatic(config.source, { sourceMaps: true })
+    builder.buildStatic(config.source, { sourceMaps: false })
       .then(function (output) {
         var stream = source('app.js');
 

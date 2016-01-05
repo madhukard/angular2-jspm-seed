@@ -1,7 +1,7 @@
 "use strict";
 
 import 'ng2-material/dist/ng2-material.css!';
-import 'ng2-material/dist/font.css!';
+import 'assets/material-icons.css!';
 import 'assets/app.css!';
 
 import 'reflect-metadata';
