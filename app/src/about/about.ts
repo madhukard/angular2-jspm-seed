@@ -1,9 +1,10 @@
 import {Component} from 'angular2/core';
-import {Http} from 'angular2/http';
+import {MATERIAL_DIRECTIVES} from 'ng2-material/all';
 
 @Component({
   selector: 'about',
-  templateUrl: 'src/about/about.html'
+  templateUrl: 'src/about/about.html',
+  directives: [MATERIAL_DIRECTIVES]
 })
 export class About {
   clickMessage = '';
