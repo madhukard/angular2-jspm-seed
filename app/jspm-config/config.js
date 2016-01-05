@@ -34,6 +34,7 @@ System.config({
     "es6-shim": "github:es-shims/es6-shim@0.33.13",
     "json": "github:systemjs/plugin-json@0.1.0",
     "ng2-bootstrap": "npm:ng2-bootstrap@1.0.0-beta.0",
+    "ng2-material": "npm:ng2-material@0.1.3",
     "reflect-metadata": "npm:reflect-metadata@0.1.2",
     "rxjs": "npm:rxjs@5.0.0-beta.0",
     "scss": "github:theefer/plugin-sass@master",
@@ -481,6 +482,13 @@ System.config({
       "inherits": "npm:inherits@2.0.1",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
+    "npm:es6-module-loader@0.17.9": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0",
+      "util": "github:jspm/nodelibs-util@0.1.0",
+      "when": "npm:when@3.7.7"
+    },
     "npm:es6-promise@3.0.2": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
@@ -812,6 +820,16 @@ System.config({
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
+    "npm:ng2-material@0.1.3": {
+      "angular2": "npm:angular2@2.0.0-beta.0",
+      "es6-promise": "npm:es6-promise@3.0.2",
+      "es6-shim": "npm:es6-shim@0.33.13",
+      "reflect-metadata": "npm:reflect-metadata@0.1.2",
+      "rxjs": "npm:rxjs@5.0.0-beta.0",
+      "systemjs": "npm:systemjs@0.19.2",
+      "typescript": "npm:typescript@1.8.0-dev.20151122",
+      "zone.js": "npm:zone.js@0.5.10"
+    },
     "npm:node-pre-gyp@0.6.18": {
       "child_process": "github:jspm/nodelibs-child_process@0.1.0",
       "events": "github:jspm/nodelibs-events@0.1.1",
@@ -1113,6 +1131,14 @@ System.config({
     "npm:supports-color@2.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
+    "npm:systemjs@0.19.2": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "es6-module-loader": "npm:es6-module-loader@0.17.9",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0",
+      "when": "npm:when@3.7.7"
+    },
     "npm:tar-pack@3.1.2": {
       "debug": "npm:debug@0.7.4",
       "fstream": "npm:fstream@1.0.8",
@@ -1160,6 +1186,9 @@ System.config({
       "tls": "github:jspm/nodelibs-tls@0.1.0",
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
+    "npm:typescript@1.8.0-dev.20151122": {
+      "tty": "github:jspm/nodelibs-tty@0.1.0"
+    },
     "npm:uid-number@0.0.3": {
       "child_process": "github:jspm/nodelibs-child_process@0.1.0",
       "path": "github:jspm/nodelibs-path@0.1.0",
@@ -1186,6 +1215,9 @@ System.config({
     },
     "npm:vm-browserify@0.0.4": {
       "indexof": "npm:indexof@0.0.1"
+    },
+    "npm:when@3.7.7": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:zone.js@0.5.10": {
       "es6-promise": "npm:es6-promise@3.0.2",

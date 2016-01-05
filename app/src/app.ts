@@ -1,5 +1,6 @@
 import {Component} from 'angular2/core';
 import {Router, Route, RouteConfig, ROUTER_DIRECTIVES, Location} from 'angular2/router';
+import {MATERIAL_DIRECTIVES, MATERIAL_PROVIDERS} from 'ng2-material/all';
 
 import {Home} from './home/home';
 import {About} from './about/about';
@@ -9,7 +10,7 @@ import {About} from './about/about';
   selector: 'my-app',
   providers: [],
   templateUrl: 'src/my-app.html',
-  directives: [ROUTER_DIRECTIVES],
+  directives: [MATERIAL_DIRECTIVES, ROUTER_DIRECTIVES],
   pipes: []
 })
 @RouteConfig([
@@ -22,14 +23,11 @@ export class AppComponent {
 
   constructor(location: Location, router: Router) {
     this.location = location;
-
-    //noinspection TypeScriptUnresolvedVariable
-    $.material.init();
-
-    //noinspection TypeScriptUnresolvedVariable
-    $.material.ripples();
-
     this.currentPathStr = '/home';
     router.subscribe((value) => this.currentPathStr = value);
+  }
+
+  clicked(message: string) {
+    console.log(message);
   }
 }

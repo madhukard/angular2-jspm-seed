@@ -1,68 +1,43 @@
-<div id="wrapper">
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-primary navbar-fixed-top" role="navigation">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" [routerLink]="['/Home']">Angular JSPM Seed</a>
-    </div>
-
-    <!-- Top Menu Items -->
-    <ul class="nav navbar-nav navbar-right top-nav">
-
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="material-icons md-20">notifications</i></a>
-        <ul class="dropdown-menu alert-dropdown">
-          <li>
-            <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
-          </li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="material-icons md-20">account_circle</i> John Smith</a>
-        <ul class="dropdown-menu">
-          <li>
-            <a [routerLink]="['/Home']"><i class="material-icons md-20">account_circle</i> Profile</a>
-          </li>
-          <li>
-            <a [routerLink]="['/Home']"><i class="material-icons md-20">email</i> Inbox</a>
-          </li>
-          <li>
-            <a [routerLink]="['/Home']"><i class="material-icons md-20">settings</i> Settings</a>
-          </li>
-          <li class="divider"></li>
-          <li>
-            <a [routerLink]="['/Home']"><i class="material-icons md-20">exit_to_app</i> Log Out</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-
-
-    <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav side-nav">
-        <li [class.active]="currentPathStr === 'home'">
-          <a [routerLink]="['/Home']"><i class="material-icons">home</i> Home</a>
-        </li>
-        <li [class.active]="currentPathStr === 'about'">
-          <a [routerLink]="['/About']"><i class="material-icons">info</i> About</a>
-        </li>
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
-  </nav>
-
-  <div id="page-wrapper">
-    <div class="container-fluid">
-      <router-outlet></router-outlet>
-    </div>
+<md-toolbar class="fixed-toolbar">
+  <div class="md-toolbar-tools">
+    <button md-button class="md-icon-button" aria-label="Settings" (click)="clicked('Menu')">
+      <i class="material-icons" md-icon>menu</i>
+    </button>
+    <h2>
+      <span>Angular2 + ng2-material + JSPM </span>
+    </h2>
+    <span flex></span>
+    <button md-button class="md-icon-button" aria-label="Favorite" (click)="clicked('Favorite')">
+      <i class="material-icons green" md-icon>favorite</i>
+    </button>
+    <button md-button class="md-icon-button" aria-label="More" (click)="clicked('Show More')">
+      <i class="material-icons" md-icon >more_vert</i>
+    </button>
   </div>
+</md-toolbar>
 
-</div>
+
+<md-content>
+  <md-tabs md-dynamic-height md-border-bottom>
+    <template md-tab label="one">
+      <md-content class="md-padding">
+        <h1 class="md-display-2">Tab One</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
+      </md-content>
+    </template>
+    <template md-tab label="two">
+      <md-content class="md-padding">
+        <h1 class="md-display-2">Tab Two</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus. Vivamus convallis sodales ante varius gravida. Curabitur a purus vel augue ultrices ultricies id a nisl. Nullam malesuada consequat diam, a facilisis tortor volutpat et. Sed urna dolor, aliquet vitae posuere vulputate, euismod ac lorem. Sed felis risus, pulvinar at interdum quis, vehicula sed odio. Phasellus in enim venenatis, iaculis tortor eu, bibendum ante. Donec ac tellus dictum neque volutpat blandit. Praesent efficitur faucibus risus, ac auctor purus porttitor vitae. Phasellus ornare dui nec orci posuere, nec luctus mauris semper.</p>
+        <p>Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa orci nec magna. Donec posuere nec sapien sed laoreet. Etiam cursus nunc in condimentum facilisis. Etiam in tempor tortor. Vivamus faucibus egestas enim, at convallis diam pulvinar vel. Cras ac orci eget nisi maximus cursus. Nunc urna libero, viverra sit amet nisl at, hendrerit tempor turpis. Maecenas facilisis convallis mi vel tempor. Nullam vitae nunc leo. Cras sed nisl consectetur, rhoncus sapien sit amet, tempus sapien.</p>
+        <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+      </md-content>
+    </template>
+    <template md-tab label="three">
+      <md-content class="md-padding">
+        <h1 class="md-display-2">Tab Three</h1>
+        <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+      </md-content>
+    </template>
+  </md-tabs>
+</md-content>
