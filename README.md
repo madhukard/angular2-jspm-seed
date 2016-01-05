@@ -10,6 +10,7 @@ A quick start template for web development with JSPM, Gulp, Bootstap, TypeScript
 Work in progress! This branch uses ng2-material for Development. There is also a bootstrap branch available.
 
 ng2-material Demo - http://madhukard.github.io/angular2-jspm-seed/ng2-material
+
 Bootstrap Demo - http://madhukard.github.io/angular2-jspm-seed/bootstap
 
 ## Development Requirements
