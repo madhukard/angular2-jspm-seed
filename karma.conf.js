@@ -1,4 +1,4 @@
-/* global module */
+/*globals module,process,require */
 module.exports = function (config) {
   'use strict';
   config.set({
@@ -23,7 +23,7 @@ module.exports = function (config) {
     },
 
     // - Chrome, ChromeCanary, Firefox, Opera, Safari (only Mac), PhantomJS, IE (only Windows)
-    browsers: ['Chrome'],
+    browsers: process.env.TRAVIS ? ['Firefox'] : ['Chrome'],
 
     reporters: ['dots', 'coverage'],
 
