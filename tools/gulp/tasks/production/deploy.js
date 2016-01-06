@@ -9,7 +9,7 @@ gulp.task('deploy', function (callback) {
     'typescript-deploy',
     'deploy-templates',
     'production-jspm-config',
-    //'test-deploy',
+    'test-deploy',
     'sass-deploy',
     'production-images',
     'copy-deploy',

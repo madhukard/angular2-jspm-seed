@@ -5,7 +5,6 @@ var gulp = require('gulp');
 var Server = require('karma').Server;
 var config = require('../../config').watch;
 var del = require('del');
-var deletePath = require('../../config').delete.coverage;
 var runSequence = require('run-sequence');
 
 /**

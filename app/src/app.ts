@@ -9,7 +9,7 @@ import {About} from './about/about';
 @Component({
   selector: 'my-app',
   providers: [],
-  templateUrl: 'src/my-app.html',
+  templateUrl: 'src/app.html',
   directives: [MATERIAL_DIRECTIVES, ROUTER_DIRECTIVES],
   pipes: []
 })
