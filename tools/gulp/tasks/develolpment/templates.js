@@ -10,6 +10,5 @@ gulp.task('dev-templates', function () {
     //need to add an angular require to keep karma happy!
     .pipe(insert.prepend('var angular = require(\'angular\');'))
     .pipe(gulp.dest(conf.dest))
-    .pipe(gulp.dest(conf.coverage))
     .pipe(browserSync.stream());
 });

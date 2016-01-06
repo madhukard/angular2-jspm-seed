@@ -22,9 +22,20 @@ module.exports = function (config) {
       ]
     },
 
-    browsers: ['PhantomJS'],
+    // - Chrome, ChromeCanary, Firefox, Opera, Safari (only Mac), PhantomJS, IE (only Windows)
+    browsers: ['Chrome'],
 
-    reporters: ['dots']
+    reporters: ['dots', 'coverage'],
+
+    preprocessors: {"target/development/src/**/!(*spec).js": "coverage"},
+    coverageReporter: {
+      dir: 'target/coverageReport',
+
+      reporters: [
+        {type: 'json'},
+        {type: 'lcov'}
+      ]
+    }
 
   });
 

@@ -50,7 +50,7 @@ module.exports = {
     development: {
       scripts: app + '/src/**/*.ts',
       dest: development + '/src',
-      coverage: build + '/coverage/js'
+      coverage: build + '/coverage/src'
     },
     production: {
       scripts: app + '/src/**/*.ts',

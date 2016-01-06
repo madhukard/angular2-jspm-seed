@@ -17,10 +17,8 @@ gulp.task('test', function (callback) {
     callback);
 });
 
-gulp.task('coverage', function (callback) {
-  runSequence('delete-coverage', 'dev-templates',
-    ['run-tests-coverage'],
-    callback);
+gulp.task('run-tests', [], function (done) {
+  runTests(done);
 });
 
 function runTests(done) {
@@ -29,25 +27,4 @@ function runTests(done) {
   }, done).start();
 }
 
-function runCoverageTests(done) {
-  new Server({
-    configFile: path.join(__dirname, '/../../../../karma-coverage.conf.js'),
-    singleRun: true
-  }, done).start();
-}
 
-gulp.task('run-tests-coverage', ['typescript-karma-coverage'], function (done) {
-  runCoverageTests(done);
-});
-
-gulp.task('run-tests', [], function (done) {
-  //gulp.watch(jspm-config.scripts, ['typescript-karma']);
-  runTests(done);
-});
-
-/**
- * Delete test folders and files
- */
-gulp.task('delete-coverage', function (callback) {
-  del(deletePath, callback);
-});
