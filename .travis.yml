@@ -6,6 +6,8 @@ before_script:
 - npm install -g jspm
 - npm install
 - jspm install
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
 script:
 - gulp deploy
 env:
