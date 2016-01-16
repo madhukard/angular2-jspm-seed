@@ -1,5 +1,3 @@
-"use strict";
-
 import 'ng2-material/dist/ng2-material.css!';
 import 'assets/material-icons.css!';
 import 'assets/app.css!';
@@ -12,6 +10,6 @@ import {ROUTER_PROVIDERS} from 'angular2/router';
 
 import {AppComponent} from './app';
 
-//noinspection TypeScriptValidateTypes
+// noinspection TypeScriptValidateTypes
 bootstrap(AppComponent, [HTTP_PROVIDERS, ROUTER_PROVIDERS])
   .catch(err => console.error(err));

@@ -8,7 +8,7 @@ describe('AppComponent component', () => {
       subscribe: function() {
       }
     };
-    //noinspection TypeScriptValidateTypes
+    // noinspection TypeScriptValidateTypes
     var appComponent = new AppComponent(null, routerMock);
     expect(appComponent).toBeDefined();
   });

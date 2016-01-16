@@ -9,6 +9,6 @@ import {MATERIAL_DIRECTIVES} from 'ng2-material/all';
 export class About {
   clickMessage = '';
   onClickMe() {
-    this.clickMessage ='You are my hero!';
+    this.clickMessage = 'You are my hero!';
   }
 }
