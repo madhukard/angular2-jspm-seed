@@ -41,6 +41,10 @@ gulp
 
 `gulp test`
 
+### Running e2e integration tests
+
+`gulp e2e`
+
 ### Production build
 
 `gulp deploy`

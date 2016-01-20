@@ -1,5 +1,6 @@
 var app = 'app';
 var src = 'app/src';
+var e2e = 'e2e';
 var vendor = 'app/vendor';
 var build = 'target';
 var development = 'target/development';
@@ -55,6 +56,10 @@ module.exports = {
     production: {
       scripts: app + '/src/**/*.ts',
       dest: production + '/src'
+    },
+    e2e: {
+      scripts: e2e + '/**/*.ts',
+      dest: build + '/e2e'
     }
   },
 

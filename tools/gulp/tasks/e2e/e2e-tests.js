@@ -2,7 +2,7 @@
 
 var gulp = require('gulp');
 var protractor = require('gulp-protractor');
-var conf = require('../config');
+var conf = require('../../config');
 var browserSync = require('browser-sync');
 
 
@@ -31,4 +31,4 @@ function runProtractor(done) {
     });
 }
 
-gulp.task('e2e', ['watch', 'webdriver-update'], runProtractor);
+gulp.task('e2e', ['typescript-e2e', 'webdriver-update'], runProtractor);

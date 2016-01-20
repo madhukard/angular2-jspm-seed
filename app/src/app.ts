@@ -26,7 +26,7 @@ export class AppComponent {
     this.currentPathStr = '/home';
     router.subscribe((value) => this.currentPathStr = value);
 
-    translate.useStaticFilesLoader('assets/i18n/', '.json');
+    translate.useStaticFilesLoader('assets/i18n', '.json');
     translate.use('en');
   }
 
