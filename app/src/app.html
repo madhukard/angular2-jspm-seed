@@ -1,24 +1,22 @@
-<md-toolbar class="fixed-toolbar">
-  <div class="md-toolbar-tools">
-    <button md-button class="md-icon-button" aria-label="Settings" (click)="clicked('Menu')">
-      <i class="material-icons" md-icon>menu</i>
-    </button>
-    <h2>
-      <span>{{'title' | translate}} </span>
-    </h2>
-    <span flex></span>
-    <button md-button class="md-icon-button" aria-label="Home" [routerLink]="['/Home']">
-      <i class="material-icons" md-icon>home</i>
-    </button>
-    <button md-button class="md-icon-button" aria-label="About" [routerLink]="['/About']">
-      <i class="material-icons" md-icon >info</i>
-    </button>
-    <button md-button class="md-icon-button" aria-label="More" (click)="clicked('Show More')">
-      <i class="material-icons" md-icon >more_vert</i>
-    </button>
-  </div>
-</md-toolbar>
+<md-sidenav-layout class="app-root">
+  <md-sidenav #start>
+    <md-nav-list>
+      <a md-list-item [routerLink]="['Home']">Home</a>
+      <a md-list-item [routerLink]="['About']">About</a>
+    </md-nav-list>
+    <button md-button (click)="start.close()">CLOSE</button>
+  </md-sidenav>
+  <div>
+    <md-toolbar color="primary">
+      <i class="material-icons" (click)="start.open()">menu</i>
+      <div class="demo-toolbar">
+        <h1>Angular 2 + Material2 + JSPM  Seed</h1>
+      </div>
+    </md-toolbar>
 
-<md-content class="app-content" layout-padding md-scroll-y>
-  <router-outlet></router-outlet>
-</md-content>
+    <div class="demo-content">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+</md-sidenav-layout>

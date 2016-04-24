@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var del = require('del');
 var path = require('../../config').delete.production;
-var deploySrc = path + '/src';
+var deploySrc = path + '/src/**/*.js';
 /**
  * Delete folders and files
  */

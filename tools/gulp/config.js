@@ -79,12 +79,12 @@ module.exports = {
     development: {
       main: app + '/scss/app.scss',
       source: src + '/**/*.scss',
-      dest: development + '/assets'
+      dest: development + '/src'
     },
     production: {
       main: app + '/scss/app.scss',
       source: src + '/**/*.scss',
-      dest: production + '/assets'
+      dest: production + '/src'
     }
   },
 
