@@ -2,15 +2,18 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var flatten = require('gulp-flatten');
 var config = require('../../config').sass.production;
-
 var globbing = require('gulp-css-globbing');
+var debug = require('gulp-debug');
+
 gulp.task('sass-deploy', function () {
-  gulp.src(config.source)
+  return gulp.src(config.source)
     .pipe(globbing({
       extensions: ['.scss']
     }))
-    .pipe(sass().on('error', sass.logError))
+    .pipe(debug({
+      title: 'debug after globbing:'
+    }))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest(config.dest));
 });

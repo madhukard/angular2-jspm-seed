@@ -1,5 +1,5 @@
-import {Component} from 'angular2/core';
-import {Router, Route, RouteConfig, ROUTER_DIRECTIVES, Location} from 'angular2/router';
+import {Component} from '@angular/core';
+import {Router, Route, RouteConfig, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 
 // noinspection TypeScriptCheckImport
 import {MdButton} from '@angular2-material/button';
@@ -34,11 +34,9 @@ import {About} from './about/about';
   new Route({ path: '/about', component: About, name: 'About'})
 ])
 export class AppComponent {
-  location: Location;
   currentPathStr = '';
-
-  constructor(location: Location, router: Router, translate: TranslateService) {
-    this.location = location;
+  
+  constructor(router: Router, translate: TranslateService) {
     this.currentPathStr = '/home';
     router.subscribe((value) => this.currentPathStr = value);
     translate.use('en');

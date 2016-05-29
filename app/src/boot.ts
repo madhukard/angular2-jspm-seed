@@ -1,8 +1,10 @@
+import 'zone.js';
+import 'reflect-metadata';
+import {provide} from '@angular/core';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {HTTP_PROVIDERS, Http} from '@angular/http';
+import {ROUTER_PROVIDERS} from '@angular/router-deprecated';
 import {AppComponent} from './app';
-import {provide} from 'angular2/core';
-import {bootstrap} from 'angular2/platform/browser';
-import {HTTP_PROVIDERS, Http} from 'angular2/http';
-import {ROUTER_PROVIDERS} from 'angular2/router';
 
 // noinspection TypeScriptCheckImport
 import {TranslateLoader, TranslateStaticLoader, TranslateService} from 'ng2-translate/ng2-translate';

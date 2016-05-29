@@ -1,17 +1,15 @@
 var gulp = require('gulp');
-var runSequence = require('run-sequence');
 
 /**
  * Run all tasks needed for a build in defined order
  */
-gulp.task('build', function (callback) {
-  runSequence('delete',
+gulp.task('build',
+  gulp.series(
+    'delete',
     'copy-dev',
     'html-dev',
-    'typescript-dev',
-    [
-      'dev-templates',
-      'sass'
-    ],
-    callback);
-});
+    'sass-lint',
+    'sass',
+    'typescript-dev'
+  )
+);

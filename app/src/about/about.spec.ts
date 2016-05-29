@@ -1,12 +1,13 @@
-import 'reflect-metadata';
+import {
+  it,
+  describe,
+  expect
+} from '@angular/core/testing';
 import {About} from './about';
 
-describe('HomeComponent component', () => {
+describe('AboutComponent component', () => {
   it('should be able to create and onClickMe method', () => {
     var aboutComponent = new About();
     expect(aboutComponent).toBeDefined();
-    expect(aboutComponent.clickMessage).toEqual('');
-    aboutComponent.onClickMe();
-    expect(aboutComponent.clickMessage).toEqual('You are my hero!');
   });
 });

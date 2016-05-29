@@ -2,22 +2,25 @@
 
 var path = require('path');
 var gulp = require('gulp');
+var glob = require("glob");
 var Server = require('karma').Server;
 
 function runTests(done) {
+  var specsToLoad = glob.sync("target/production/src/**/*.spec.js");
+  var filesToServe = glob.sync("target/production/src/**/*.@(js|html|css)");
+
   new Server({
-    configFile: path.join(__dirname, '/../../../../karma.conf.js'),
+    configFile: path.join(__dirname, '/../../../karma.conf.js'),
     singleRun: true,
     autoWatch: false,
     jspm: {
       config: 'app/jspm-config/config.js',
       packages: "target/development/jspm/",
-      loadFiles: [
-        'target/production/src/**/*.spec.js'
-      ],
-      serveFiles: [
-        'target/production/src/**/!(*spec).js'
-      ]
+      loadFiles: specsToLoad,
+      serveFiles: filesToServe
+    },
+    proxies: {
+      "/src/": "/base/target/production/src/"
     },
     reporters: ['dots', 'coverage'],
     preprocessors: {"target/production/src/**/!(*spec).js": "coverage"}

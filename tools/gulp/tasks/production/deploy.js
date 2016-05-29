@@ -1,20 +1,11 @@
 var gulp = require('gulp');
-var runSequence = require('run-sequence');
-
-/**
- * Run all tasks needed for a build in defined order
- */
-gulp.task('deploy', function (callback) {
-  runSequence('delete-deploy',
-    'typescript-deploy',
-    'deploy-templates',
-    'production-jspm-config',
-    //'test-deploy',
-    'sass-deploy',
-    'production-images',
-    'copy-deploy',
-    'scripts-bundle',
-    'delete-deploy-src',
-    'html-deploy',
-    callback);
-});
+gulp.task('deploy', gulp.series(
+  'delete-deploy',
+  'html-deploy',
+  'sass-deploy',
+  'typescript-deploy',
+  'test-deploy',
+  'copy-deploy',
+  'scripts-bundle',
+  'delete-deploy-src'
+));

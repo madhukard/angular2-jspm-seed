@@ -1,7 +1,9 @@
 var app = 'app';
 var src = 'app/src';
-var e2e = 'e2e';
+var e2e = 'test/e2e';
 var vendor = 'app/vendor';
+var shared = '../ui-proto/shared';
+var vendorSCSS = '../ui-proto/scss/materialize/materialize.scss';
 var build = 'target';
 var development = 'target/development';
 var coverage = 'target/coverage';
@@ -29,32 +31,36 @@ module.exports = {
   },
   copy: {
     development: {
+      sharedAssets: shared + '/assets/**/*.*',
       assets: app + '/assets/**/*.*',
       js: app + '/**/*.js',
-      vendorFiles: ['node_modules/angular2/bundles/angular2-polyfills.min.js'],
+      vendorFiles: [],
       dest: development
     },
     production: {
+      sharedAssets: shared + '/assets/**/*.*',
+      assets: app + '/assets/**/*.*',
       vendorFiles: ['node_modules/angular2/bundles/angular2-polyfills.min.js'],
       dest: production
     }
   },
   watch: {
-    html: app + '/**/*.html',
-    scripts: src + '/**/*.ts',
-    sass: app + '/**/*.scss',
-    assets: app + '/assets/**/*.*'
+    html: [app + '/**/*.html', shared + '/**/*.html'],
+    scripts: [app + '/src/**/*.ts', shared + '/src/**/*.ts'],
+    sass: [src + '/**/*.scss', shared + '/src/**/*.scss'],
+    assets: [app + '/assets/**/*.*', shared + '/assets/**/*.*']
   },
   app: app,
   production: production,
+  shared: shared,
   typescript: {
     development: {
-      scripts: app + '/src/**/*.ts',
+      scripts: [app + '/src/**/*.ts', shared + '/src/**/*.ts'],
       dest: development + '/src',
       coverage: build + '/coverage/src'
     },
     production: {
-      scripts: app + '/src/**/*.ts',
+      scripts: [app + '/src/**/*.ts', shared + '/src/**/*.ts'],
       dest: production + '/src'
     },
     e2e: {
@@ -65,39 +71,35 @@ module.exports = {
 
   html: {
     development: {
-      source: app + '/**/*.html',
+      source: [app + '/**/*.html', shared + '/**/*.html'],
       dest: development,
       coverage: build + '/coverage/js'
     },
     production: {
-      source: app + '/**/*.html',
+      source: [app + '/**/*.html', shared + '/**/*.html'],
       dest: production
     }
   },
 
   sass: {
     development: {
-      main: app + '/scss/app.scss',
-      source: src + '/**/*.scss',
+      vendorSCSS: vendorSCSS,
+      vendorSCSSDest: development + '/assets',
+      source: [src + '/**/*.scss', shared + '/src/**/*.scss'],
       dest: development + '/src'
     },
     production: {
-      main: app + '/scss/app.scss',
-      source: src + '/**/*.scss',
+      vendorSCSS: vendorSCSS,
+      vendorSCSSDest: production + '/assets',
+      source: [src + '/**/*.scss', shared + '/src/**/*.scss'],
       dest: production + '/src'
-    }
-  },
-
-  images: {
-    production: {
-      source: app + '/assets/**/*.*',
-      dest: production + '/assets'
     }
   },
 
   scripts: {
     production: {
       source: production + '/src/boot.js' ,
+      loginSource: production + '/src/login/loginboot.js' ,
       dest: production
     }
   }

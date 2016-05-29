@@ -7,12 +7,16 @@ var conf = require('../../config').copy.development;
  */
 gulp.task('copy-dev', function () {
   gulp
-    .src([conf.assets])
+    .src([conf.sharedAssets])
     .pipe(gulp.dest(conf.dest + '/assets'));
 
   gulp
+    .src([conf.assets])
+    .pipe(gulp.dest(conf.dest + '/assets'));
+
+  /*gulp
     .src(conf.vendorFiles)
-    .pipe(gulp.dest(conf.dest + '/vendor'));
+    .pipe(gulp.dest(conf.dest + '/vendor'));*/
 
   return gulp
     .src([conf.js])

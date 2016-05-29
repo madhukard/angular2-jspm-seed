@@ -10,6 +10,10 @@ var uglify     = require('gulp-uglify');
 var rename = require('gulp-rename');
 
 gulp.task('scripts-bundle', function () {
+  return scriptsBundle(config.source, 'app.js');
+});
+
+var scriptsBundle = function(bundleSource, targetFileName) {
   var builder = new jspm.Builder();
 
   builder.config({
@@ -21,9 +25,9 @@ gulp.task('scripts-bundle', function () {
   });
 
   return new Promise(function(resolve, reject) {
-    builder.buildStatic(config.source, { sourceMaps: true })
+    builder.buildStatic(bundleSource, bundleSource, { sourceMaps: true })
       .then(function (output) {
-        var stream = source('app.js');
+        var stream = source(targetFileName);
 
         stream.write(output.source);
         process.nextTick(function () {
@@ -31,14 +35,14 @@ gulp.task('scripts-bundle', function () {
         });
 
         return stream.pipe(vinylBuffer())
-          .pipe(sourcemaps.init())
+          //.pipe(sourcemaps.init())
           .pipe(ngAnnotate())
-          .pipe(uglify())
-          .pipe(rename({ suffix: '.min' }))
-          .pipe(sourcemaps.write())
+          //.pipe(uglify())
+          //.pipe(rename({ suffix: '.min' }))
+          //.pipe(sourcemaps.write())
           .pipe(gulp.dest(config.dest))
           .on('end', resolve)
           .on('error', reject);
       }, reject);
   });
-});
+};

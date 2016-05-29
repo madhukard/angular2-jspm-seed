@@ -1,4 +1,8 @@
-import 'reflect-metadata';
+import {
+  it,
+  describe,
+  expect
+} from '@angular/core/testing';
 import {Home} from './home';
 
 describe('HomeComponent component', () => {
