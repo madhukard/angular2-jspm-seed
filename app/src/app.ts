@@ -25,7 +25,8 @@ import {About} from './about/about';
     ROUTER_DIRECTIVES,
     MD_SIDENAV_DIRECTIVES,
     MD_LIST_DIRECTIVES,
-    MdToolbar
+    MdToolbar,
+    MdButton
   ],
   pipes: [TranslatePipe]
 })
@@ -35,7 +36,7 @@ import {About} from './about/about';
 ])
 export class AppComponent {
   currentPathStr = '';
-  
+
   constructor(router: Router, translate: TranslateService) {
     this.currentPathStr = '/home';
     router.subscribe((value) => this.currentPathStr = value);

@@ -1,5 +1,10 @@
 import 'reflect-metadata';
 import 'es6-shim';
+import {
+  it,
+  describe,
+  expect
+} from '@angular/core/testing';
 import {AppComponent} from './app';
 
 describe('AppComponent component', () => {
@@ -18,7 +23,7 @@ describe('AppComponent component', () => {
       }
     };
     // noinspection TypeScriptValidateTypes
-    var appComponent = new AppComponent(null, routerMock, translateMock);
+    var appComponent = new AppComponent(routerMock, translateMock);
     expect(appComponent).toBeDefined();
   });
 });
